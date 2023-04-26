@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol AppManagerDelegate {
+    func didUpdateAppStoreData(_ appManager: AppManager, appStoreData: AppStoreModel)
+    func didFailWithError(error: Error)
+}
+
 struct AppManager {
     
+    var delegate: AppManagerDelegate?
     
     func performRequest() {
         
@@ -25,12 +31,14 @@ struct AppManager {
             
             let task = session.dataTask(with: url) { data, response, error in
                 if error != nil {
-                    print(error!)
+                    self.delegate?.didFailWithError(error: error!)
                     return
                 }
                 
                 if let safeData = data {
-                    self.parseJSON(appStoreData: safeData)
+                    if let appStoreData = self.parseJSON(with: safeData) {
+                        delegate?.didUpdateAppStoreData(self, appStoreData: appStoreData)
+                    }
                 }
             }
             
@@ -39,25 +47,24 @@ struct AppManager {
         }
     }
     
-    func parseJSON(appStoreData: Data) {
+    func parseJSON(with appStoreData: Data) -> AppStoreModel? {
         let decoder = JSONDecoder()
         
         do {
             let decodedData = try decoder.decode(AppStoreData.self, from: appStoreData)
             
-            var appCategories = [AppCat]()
+            var categories = [AppCategory]()
+
+            for category in decodedData.categories! {
+                categories.append(category)
+            }
             
-            print(decodedData.categories)
-//            for cat in decodedData.categories! {
-////                let appCategory = AppCategory()
-//                appCategories.append(cat)
-//            }
-//            for app in appCategories
+            let appStoreData = AppStoreModel(categories: categories)
             
-//            print(appCategories[0].apps![0])
-            
+            return appStoreData
         } catch {
-            print(error)
+            delegate?.didFailWithError(error: error)
+            return nil
         }
         
     }

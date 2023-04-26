@@ -18,6 +18,8 @@
 		C665FDF129F7C25700A2A99A /* AppStoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665FDF029F7C25700A2A99A /* AppStoreData.swift */; };
 		C692B3C129F684400051A351 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692B3C029F684400051A351 /* Models.swift */; };
 		C692B3C329F6BCB90051A351 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692B3C229F6BCB90051A351 /* AppManager.swift */; };
+		C6A135FC29F915A4003DD93C /* AppStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A135FB29F915A4003DD93C /* AppStoreModel.swift */; };
+		C6A135FE29F964D7003DD93C /* LargeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A135FD29F964D7003DD93C /* LargeCategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C665FDF029F7C25700A2A99A /* AppStoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreData.swift; sourceTree = "<group>"; };
 		C692B3C029F684400051A351 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C692B3C229F6BCB90051A351 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		C6A135FB29F915A4003DD93C /* AppStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreModel.swift; sourceTree = "<group>"; };
+		C6A135FD29F964D7003DD93C /* LargeCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +78,12 @@
 				C63AA0D929F2910300C253E0 /* LaunchScreen.storyboard */,
 				C63AA0DC29F2910300C253E0 /* Info.plist */,
 				C63AA0E229F2925800C253E0 /* CategoryCell.swift */,
+				C6A135FD29F964D7003DD93C /* LargeCategoryCell.swift */,
 				C63AA0E429F2C20100C253E0 /* AppCell.swift */,
 				C692B3C029F684400051A351 /* Models.swift */,
 				C692B3C229F6BCB90051A351 /* AppManager.swift */,
 				C665FDF029F7C25700A2A99A /* AppStoreData.swift */,
+				C6A135FB29F915A4003DD93C /* AppStoreModel.swift */,
 			);
 			path = AppStore;
 			sourceTree = "<group>";
@@ -154,8 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C63AA0E529F2C20100C253E0 /* AppCell.swift in Sources */,
+				C6A135FE29F964D7003DD93C /* LargeCategoryCell.swift in Sources */,
 				C63AA0D329F290FF00C253E0 /* FeaturedAppController.swift in Sources */,
 				C63AA0CF29F290FF00C253E0 /* AppDelegate.swift in Sources */,
+				C6A135FC29F915A4003DD93C /* AppStoreModel.swift in Sources */,
 				C692B3C129F684400051A351 /* Models.swift in Sources */,
 				C63AA0D129F290FF00C253E0 /* SceneDelegate.swift in Sources */,
 				C665FDF129F7C25700A2A99A /* AppStoreData.swift in Sources */,

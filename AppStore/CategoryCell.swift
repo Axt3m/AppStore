@@ -55,7 +55,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return label
     }()
     
-    private func setupViews() {
+    func setupViews() {
         backgroundColor = .clear
 
         addSubview(appsCollectionView)
